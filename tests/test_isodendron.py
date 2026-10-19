@@ -888,7 +888,7 @@ def _main() -> int:
         if nombre.startswith("test_") and callable(fn)
     ]
 
-    print(f"isodendron-py {isodendron_py_version} (C {isodendron_version()}) — "
+    print(f"isodendron {isodendron_py_version} (C {isodendron_version()}) — "
           f"{len(pruebas)} casos\n")
     print(f"shared library: {lib_path}\n")
 

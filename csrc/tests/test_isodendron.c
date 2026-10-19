@@ -9,7 +9,8 @@
  *   - isodendron.c    API pública (train, predict, version, free)
  *
  * No depende de ningún framework externo: se compila y se ejecuta con
- * `nmake /f Makefile.msvc test` o `make test`. El proceso devuelve 0 si
+ * `cmake --build build --config Release` y
+ * `ctest --test-dir build -C Release`. El proceso devuelve 0 si
  * todo pasa y 1 si algo falla, de forma que sirve en integración continua.
  *
  * Los módulos internos (arena, counts, blob) se enlazan directamente
