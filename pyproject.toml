@@ -1,0 +1,74 @@
+[build-system]
+requires = ["scikit-build-core>=0.11"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "isodendron"
+version = "0.1.0"
+description = "Deterministic decision trees whose splits ignore the target."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "David Fernández Roibás" }]
+keywords = [
+    "decision-tree",
+    "classifier",
+    "deterministic",
+    "ctypes",
+    "machine-learning",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+dev = [
+    "build>=1.2",
+    "cibuildwheel>=2.22",
+    "pytest>=8",
+    "twine>=5",
+]
+
+[project.urls]
+Homepage = "https://github.com/washedfrere/isodendron"
+Repository = "https://github.com/washedfrere/isodendron"
+Issues = "https://github.com/washedfrere/isodendron/issues"
+Changelog = "https://github.com/washedfrere/isodendron/blob/main/CHANGELOG.md"
+
+[tool.scikit-build]
+wheel.packages = ["src/isodendron"]
+wheel.py-api = "py3"
+build-dir = "build/{wheel_tag}"
+editable.rebuild = true
+sdist.include = [
+    "CMakeLists.txt",
+    "csrc/**",
+    "tests/**",
+    "examples/**",
+    "CHANGELOG.md",
+]
+
+[tool.cibuildwheel]
+# The wheel is py3-none-<platform>, so one Python per platform is enough.
+build = "cp313-*"
+test-requires = "pytest"
+test-command = "pytest {project}/tests"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Build output
+build/
+dist/
+wheelhouse/
+CMakeUserPresets.json
+compile_commands.json
+
+# Local build helpers
+.wheel-deps/
+wheels/
+.work/
+.tmp/
+.install-test/
+piptest/
+build-*/
+
+# Local outputs
+*.isod
+examples/results/
+.acl-recovery/
+
+# OS noise
+.DS_Store
+Thumbs.db

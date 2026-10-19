@@ -1,0 +1,30 @@
+Thanks to kaggle. Data sample: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
+
+Attribute Information
+Age: age of the patient [years]
+Sex: sex of the patient [M: Male, F: Female]
+ChestPainType: chest pain type [TA: Typical Angina, ATA: Atypical Angina, NAP: Non-Anginal Pain, ASY: Asymptomatic]
+RestingBP: resting blood pressure [mm Hg]
+Cholesterol: serum cholesterol [mm/dl]
+FastingBS: fasting blood sugar [1: if FastingBS > 120 mg/dl, 0: otherwise]
+RestingECG: resting electrocardiogram results [Normal: Normal, ST: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV), LVH: showing probable or definite left ventricular hypertrophy by Estes' criteria]
+MaxHR: maximum heart rate achieved [Numeric value between 60 and 202]
+ExerciseAngina: exercise-induced angina [Y: Yes, N: No]
+Oldpeak: oldpeak = ST [Numeric value measured in depression]
+ST_Slope: the slope of the peak exercise ST segment [Up: upsloping, Flat: flat, Down: downsloping]
+HeartDisease: output class [1: heart disease, 0: Normal]
+
+Categorical convention:
+Attribute Information
+Age: 0=[0<=age<10], 1=[10<=age<20], 2=[20<=age<30], 3=[30<=age<40], 4=[40<=age<50], 5=[50<=age<60], 6=[60<=age<70], 7=[70<=age<80], 8=[80<=age<90], 9=[90<=age<100], 10=[age>=100], 99=[other value]
+Sex: 1=M, 2=F, 0=[other value]
+ChestPainType: 1=TA, 2=ATA, 3=NAP, 4=ASY, 0=[other value]
+RestingBP: 1 to 5 in quintiles of min and max values, 0=[null]
+Cholesterol: 1 to 5 in quintiles of min and max values, 0=[null]
+FastingBS: 1=1, 0=0
+RestingECG: 1=Normal, 2=ST, 3=ST-T, 4=T, 5=ST, 6=LVH, 0=[other value]
+MaxHR: 0=[MaxHR<60], 6=[60<=MaxHR<70], 7=[70<=MaxHR<80], 8=[80<=MaxHR<90], 9=[90<=MaxHR<100], 10=[100<=MaxHR<110], 11=[110<=MaxHR<120], 12=[120<=MaxHR<130], 13=[130<=MaxHR<140], 14=[140<=MaxHR<150], 15=[150<=MaxHR<160], 16=[160<=MaxHR<170], 17=[170<=MaxHR<180], 18=[180<=MaxHR<190], 19=[190<=MaxHR<200], 20=[MaxHR>=200], 99=[other value]
+ExerciseAngina: 1=Y, 2=N, 0=[other value]
+Oldpeak: 1 to 5 in quintiles of min and max values, 0=[null]
+ST_Slope: 1=Up, 2=Flat, 3=Down, 0=[other value]
+HeartDisease: 1=1, 0=0
