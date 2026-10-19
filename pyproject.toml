@@ -55,13 +55,6 @@ wheel.packages = ["src/isodendron"]
 wheel.py-api = "py3"
 build-dir = "build/{wheel_tag}"
 editable.rebuild = true
-sdist.include = [
-    "CMakeLists.txt",
-    "csrc/**",
-    "tests/**",
-    "examples/**",
-    "CHANGELOG.md",
-]
 
 [tool.cibuildwheel]
 # The wheel is py3-none-<platform>, so one Python per platform is enough.

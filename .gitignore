@@ -33,3 +33,9 @@ examples/results/
 # OS noise
 .DS_Store
 Thumbs.db
+
+# Local build/test checkouts
+.sdist-test/
+src/isodendron/*.dll
+src/isodendron/*.so
+src/isodendron/*.dylib
